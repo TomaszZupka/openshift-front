@@ -5,7 +5,10 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "prebuild": "npm run lint && npm run dockerTest",
+    "buildProd": "npm run build -- --configuration=production --progress=false",
     "test": "ng test",
+    "dockerTest": "npm run test -- --browsers=ChromeForDocker --watch=false --progress=false",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },

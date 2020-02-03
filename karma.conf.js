@@ -3,6 +3,16 @@
 
 module.exports = function (config) {
   config.set({
+    customLaunchers: {
+      ChromeForDocker: {
+        base: 'ChromeHeadless',
+        flags: [
+          '--no-sandbox',
+          '--disable-setuid-sandbox',
+          '--disable-gpu'
+        ]
+      }
+    },
     basePath: '',
     frameworks: ['jasmine', '@angular-devkit/build-angular'],
     plugins: [
