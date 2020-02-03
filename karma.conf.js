@@ -14,7 +14,7 @@ module.exports = function (config) {
         getDriver: function () {
           return new webdriver.Builder()
             .forBrowser('chrome')
-            .usingServer('http://hostname:3000') // /wd/hub Docker is run using docker run -d -p 4444:4444 -v /dev/shm:/dev/shm selenium/standalone-chrome
+            .usingServer('http://localhost:3000') // /wd/hub Docker is run using docker run -d -p 4444:4444 -v /dev/shm:/dev/shm selenium/standalone-chrome
             .build()
         }
 // flags: ['--no-sandbox', '--headless', '--disable-gpu', '--disable-software-rasterizer', '--disable-dev-shm-usage', '--remote-debugging-port=9222']
