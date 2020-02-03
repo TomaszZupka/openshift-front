@@ -4,12 +4,14 @@
 module.exports = function (config) {
   config.set({
     customLaunchers: {
-      ChromeForDocker: {
-        base: 'ChromeHeadless',
+      ChromeHeadless: {
+        base: 'Chrome',
         flags: [
+          '--headless',
+          '--disable-gpu',
           '--no-sandbox',
           '--disable-setuid-sandbox',
-          '--disable-gpu'
+          '--remote-debugging-port=9222'
         ]
       }
     },
