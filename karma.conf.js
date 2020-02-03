@@ -8,7 +8,7 @@ module.exports = function (config) {
   config.set({
     customLaunchers: {
       ChromeHeadless: {
-        base: 'WebDriver',
+        base: 'Chrome',
         url: { hostname: 'localhost', port: 3000 }
         // flags: [
         //   '--headless',
