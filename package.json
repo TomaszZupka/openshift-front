@@ -5,7 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "prebuild": "npm run lint",
+    "prebuild": "npm run lint && npm run ciTest",
     "buildProd": "npm run build -- --configuration=production --progress=false",
     "test": "ng test",
     "ciTest": "npm run test -- --browsers=ChromeHeadless --watch=false --progress=false",

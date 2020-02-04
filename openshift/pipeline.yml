@@ -1,0 +1,15 @@
+kind: "BuildConfig"
+apiVersion: "v1"
+metadata:
+  name: "angular-example-pipeline"
+spec:
+  source:
+    git:
+      ref: master
+      uri: 'https://JK158307@bitbucket.ci.warta.pl/scm/nzr/hello-world-front.git'
+    sourceSecret:
+      name: authentication3
+    type: Git
+  strategy:
+    jenkinsPipelineStrategy:
+      jenkinsfilePath: jenkins/Jenkinsfile
