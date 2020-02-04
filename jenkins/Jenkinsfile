@@ -20,11 +20,6 @@ pipeline{
           $(npm bin)/ng test --single-run --browsers ChromeHeadless
         '''
       }
-      post {
-          always {
-            junit "test-results.xml"
-          }
-      }
     }
     stage ('code quality'){
       steps{
