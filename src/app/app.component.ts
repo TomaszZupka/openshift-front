@@ -22,7 +22,7 @@ export class AppComponent {
   }
 
   onClick1() {
-    this.httpClient.get<any>('/test')
+    this.httpClient.get<any>('/api/test')
       .subscribe(data => {
         console.log('data: ', data);
         this.test = data;

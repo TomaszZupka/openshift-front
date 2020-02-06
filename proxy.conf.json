@@ -1,6 +1,6 @@
 {
-  "/*": {
-    "target": "http://ezr-web-app.new-ezr-tst.svc:8080",
+  "/api/*": {
+    "target": "http://localhost:8000/api",
     "secure": false
   }
 }
