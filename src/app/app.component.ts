@@ -20,4 +20,20 @@ export class AppComponent {
         this.test = data;
       });
   }
+
+  onClick1() {
+    this.httpClient.get<any>('http://springboot-test/test')
+      .subscribe(data => {
+        console.log('data: ', data);
+        this.test = data;
+      });
+  }
+
+  onClick2() {
+    this.httpClient.get<any>('http://springboot-test:8080/test')
+      .subscribe(data => {
+        console.log('data: ', data);
+        this.test = data;
+      });
+  }
 }
