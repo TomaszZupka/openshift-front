@@ -17,7 +17,7 @@ pipeline{
     stage ('test'){
       steps{
         sh '''
-          $(npm bin)/ng test --single-run --browsers ChromeHeadless
+          $(npm bin)/npm run ciTest
         '''
       }
     }
