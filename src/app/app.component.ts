@@ -14,7 +14,7 @@ export class AppComponent {
   }
 
   onClick() {
-    this.httpClient.get<any>('http://springboot-test:8080/test')
+    this.httpClient.get<any>('http://0.0.0.0:8080/test')
       .subscribe(data => {
         console.log('data: ', data);
         this.test = data;
