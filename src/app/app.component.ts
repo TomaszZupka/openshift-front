@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,4 +8,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'openshift-front';
+  test: string;
+
+  constructor(private httpClient: HttpClient) {
+  }
+
+  onClick() {
+    this.httpClient.get<any>('/test')
+      .subscribe(data => {
+        console.log('data: ', data);
+        this.test = data;
+      });
+  }
 }
