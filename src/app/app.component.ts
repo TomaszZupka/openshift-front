@@ -14,7 +14,7 @@ export class AppComponent {
   }
 
   onClick() {
-    this.httpClient.get<any>('/test')
+    this.httpClient.get<any>('http://localhost:8080/test')
       .subscribe(data => {
         console.log('data: ', data);
         this.test = data;
@@ -22,7 +22,7 @@ export class AppComponent {
   }
 
   onClick1() {
-    this.httpClient.get<any>('http://springboot-test/test')
+    this.httpClient.get<any>('/test')
       .subscribe(data => {
         console.log('data: ', data);
         this.test = data;
@@ -30,7 +30,7 @@ export class AppComponent {
   }
 
   onClick2() {
-    this.httpClient.get<any>('http://springboot-test:8080/test')
+    this.httpClient.get<any>('http://ezr-web-app.new-ezr-tst.svc:8080/test')
       .subscribe(data => {
         console.log('data: ', data);
         this.test = data;
